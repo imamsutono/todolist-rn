@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 import { Row } from '../../components';
 import colors from '../../constants/colors';
 
@@ -9,39 +9,58 @@ const Categories = () => (
       Categories
     </Text>
 
-    <Row>
-      <View style={styles.card}>
-        <View style={styles.body}>
-          <Text style={styles.title}>
-            Mobile App
-          </Text>
-          <Text style={styles.subtitle}>
-            10 Tasks
-          </Text>
+    <ScrollView horizontal={true}>
+      <Row>
+
+        <View style={styles.card}>
+          <View style={styles.body}>
+            <Text style={styles.title}>
+              Mobile App
+            </Text>
+            <Text style={styles.subtitle}>
+              10 Tasks
+            </Text>
+          </View>
+
+          <Image
+            style={styles.thumbnail}
+            source={require('../../../assets/mobile.png')}
+          />
         </View>
 
-        <Image
-          style={styles.thumbnail}
-          source={require('../../../assets/mobile.png')}
-        />
-      </View>
+        <View style={styles.card}>
+          <View style={styles.body}>
+            <Text style={styles.title}>
+              Website
+            </Text>
+            <Text style={styles.subtitle}>
+              5 Tasks
+            </Text>
+          </View>
 
-      <View style={styles.card}>
-        <View style={styles.body}>
-          <Text style={styles.title}>
-            Website
-          </Text>
-          <Text style={styles.subtitle}>
-            5 Tasks
-          </Text>
+          <Image
+            style={styles.thumbnail}
+            source={require('../../../assets/mobile.png')}
+          />
         </View>
 
-        <Image
-          style={styles.thumbnail}
-          source={require('../../../assets/mobile.png')}
-        />
-      </View>
-    </Row>
+        <View style={styles.card}>
+          <View style={styles.body}>
+            <Text style={styles.title}>
+              Blog
+            </Text>
+            <Text style={styles.subtitle}>
+              3 Tasks
+            </Text>
+          </View>
+
+          <Image
+            style={styles.thumbnail}
+            source={require('../../../assets/mobile.png')}
+          />
+        </View>
+      </Row>
+    </ScrollView>
   </View>
 );
 
@@ -58,7 +77,7 @@ const styles = StyleSheet.create({
   card: {
     backgroundColor: colors.grey,
     borderRadius: 10,
-    width: '45%',
+    width: 150,
     overflow: 'hidden'
   },
   body: {
