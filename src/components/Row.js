@@ -10,7 +10,8 @@ const Row = ({ children }) => (
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    columnGap: 20
+    columnGap: 20,
+    alignItems: 'center'
   }
 });
 
