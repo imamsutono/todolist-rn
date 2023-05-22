@@ -36,3 +36,6 @@ Berikut adalah teknologi yang digunakan dalam project ini:
 - React Native
 - Expo
 - React Navigation
+
+## Tangkapan layar aplikasi
+![./assets/Screenshot.png](./assets/Screenshot.png)
