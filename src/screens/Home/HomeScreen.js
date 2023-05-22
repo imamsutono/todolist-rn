@@ -4,6 +4,7 @@ import colors from '../../constants/colors';
 import layouts from '../../constants/layouts';
 import Categories from './Categories';
 import Header from './Header';
+import Ongoing from './Ongoing';
 import Search from './Search';
 
 const HomeScreen = () => {
@@ -13,6 +14,7 @@ const HomeScreen = () => {
       <Search />
 
       <Categories />
+      <Ongoing />
     </View>
   );
 };
