@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
   },
   input: {
     backgroundColor: colors.grey,
-    padding: 15,
+    paddingHorizontal: 25,
     borderRadius: 50,
     flexGrow: 1,
     marginRight: 20,
@@ -33,10 +33,9 @@ const styles = StyleSheet.create({
   },
   filter: {
     backgroundColor: colors.primary,
-    padding: 15,
     borderRadius: 30,
-    width: 60,
-    height: 60,
+    width: 55,
+    height: 55,
     justifyContent: 'center',
     alignItems: 'center'
   }
