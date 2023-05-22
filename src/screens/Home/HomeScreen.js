@@ -2,6 +2,7 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import colors from '../../constants/colors';
 import layouts from '../../constants/layouts';
+import Categories from './Categories';
 import Header from './Header';
 import Search from './Search';
 
@@ -10,6 +11,8 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Header />
       <Search />
+
+      <Categories />
     </View>
   );
 };
