@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet } from 'react-native';
 import colors from '../constants/colors';
 
-const H1 = ({ children }) => (
+const H2 = ({ children }) => (
   <Text style={styles.textStyle}>
     {children}
   </Text>
@@ -10,10 +10,11 @@ const H1 = ({ children }) => (
 
 const styles = StyleSheet.create({
   textStyle: {
+    fontSize: 20,
     color: colors.white,
-    fontSize: 24,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginVertical: 15,
   }
 });
 
-export default H1;
+export default H2;
