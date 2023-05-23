@@ -38,4 +38,6 @@ Berikut adalah teknologi yang digunakan dalam project ini:
 - React Navigation
 
 ## Tangkapan layar aplikasi
-![./assets/Screenshot.png](./assets/Screenshot.png)
+<img src="./assets/screenshot/home.png" alt="home screen" width="32%" style="margin-right: 1%;">
+<img src="./assets/screenshot/new-task.png" alt="add new task screen" width="32%" style="margin-right: 1%;">
+<img src="./assets/screenshot/success-add.png" alt="success add task alert" width="32%">
