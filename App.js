@@ -12,11 +12,23 @@ export default function App() {
     <NavigationContainer>
       <StatusBar barStyle="light-content" backgroundColor={colors.black} />
 
-      <Stack.Navigator
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="NewTask" component={NewTaskScreen} />
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="NewTask"
+          component={NewTaskScreen}
+          options={{
+            title: "New Task",
+            headerStyle: {
+              backgroundColor: colors.black,
+            },
+            headerTintColor: colors.white
+          }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
