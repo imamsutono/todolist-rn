@@ -1,67 +1,79 @@
 import React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { H1, H2, Row } from '../../components';
 import layouts from '../../constants/layouts';
 import colors from '../../constants/colors';
 import Card from './Card';
 
-const NewTaskScreen = () => (
-  <View style={styles.container}>
-    <H1>Create{'\n'}New Task</H1>
+const NewTaskScreen = ({ navigation }) => {
+  const addNewTask = () => {
+    Alert.alert('Congrats 🎉', 'New task successfully added!', [
+      {
+        text: 'OK',
+        onPress: () => navigation.goBack()
+      }
+    ]);
+  };
 
-    <Text style={styles.taskLabel}>
-      Task title
-    </Text>
-    <TextInput
-      style={styles.taskInput}
-      placeholder='Input your task title'
-      placeholderTextColor={colors.white}
-    />
+  return (
+    <View style={styles.container}>
+      <H1>Create{'\n'}New Task</H1>
 
-    <Row>
-      <Card
-        icon="calendar-outline"
-        iconColor="amber"
-        title="Date"
-        subtitle="24 Dec"
-      />
-      <Card
-        icon="library-outline"
-        iconColor="blue"
-        title="Category"
-        subtitle="Final exam"
-      />
-    </Row>
-    <Row>
-      <Card
-        icon="time-outline"
-        iconColor="green"
-        title="Task Start"
-        subtitle="12:45 PM"
-      />
-      <Card
-        icon="alarm-outline"
-        iconColor="primary"
-        title="Task End"
-        subtitle="07:45 PM"
-      />
-    </Row>
-
-    <H2>Descriptions</H2>
-    <Text style={styles.description}>
-      Write down your task in this to-do list app to organize your task better.
-      Wish your day more productive.
-    </Text>
-
-    <TouchableOpacity
-      style={styles.submitButton}
-    >
-      <Text style={styles.submitLabel}>
-        Create Task
+      <Text style={styles.taskLabel}>
+        Task title
       </Text>
-    </TouchableOpacity>
-  </View>
-);
+      <TextInput
+        style={styles.taskInput}
+        placeholder='Input your task title'
+        placeholderTextColor={colors.white}
+      />
+
+      <Row>
+        <Card
+          icon="calendar-outline"
+          iconColor="amber"
+          title="Date"
+          subtitle="24 Dec"
+        />
+        <Card
+          icon="library-outline"
+          iconColor="blue"
+          title="Category"
+          subtitle="Final exam"
+        />
+      </Row>
+      <Row>
+        <Card
+          icon="time-outline"
+          iconColor="green"
+          title="Task Start"
+          subtitle="12:45 PM"
+        />
+        <Card
+          icon="alarm-outline"
+          iconColor="primary"
+          title="Task End"
+          subtitle="07:45 PM"
+        />
+      </Row>
+
+      <H2>Descriptions</H2>
+      <Text style={styles.description}>
+        Write down your task in this to-do list app to organize your task better.
+        Wish your day more productive.
+      </Text>
+
+      <TouchableOpacity
+        onPress={addNewTask}
+        style={styles.submitButton}
+      >
+        <Text style={styles.submitLabel}>
+          Create Task
+        </Text>
+      </TouchableOpacity>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
