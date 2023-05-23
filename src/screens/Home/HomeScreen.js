@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
+import { FAB } from '../../components';
 import colors from '../../constants/colors';
 import layouts from '../../constants/layouts';
 import Categories from './Categories';
@@ -7,7 +8,9 @@ import Header from './Header';
 import Ongoing from './Ongoing';
 import Search from './Search';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
+  const addNewTask = () => navigation.navigate('NewTask');
+
   return (
     <View style={styles.container}>
       <Header />
@@ -15,6 +18,8 @@ const HomeScreen = () => {
 
       <Categories />
       <Ongoing />
+
+      <FAB onPress={addNewTask} />
     </View>
   );
 };
